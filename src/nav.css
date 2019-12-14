@@ -1,0 +1,20 @@
+nav{
+    display: flex;
+    background-color: rgba(170, 20, 20, 0.877);
+    justify-content: space-around;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+}
+.nav-link  li{
+    color:  white;
+    /* font-weight: normal; */
+    text-decoration: none;
+}
+h3{
+    color: white;
+}
