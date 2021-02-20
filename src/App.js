@@ -1,9 +1,27 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import Nav from './nav.js';
 import About from './about.js';
 import Shop from './shop.js';
+import Auth from './Auth.js';
 
+const PrivateRoute = ({component : Component, ...rest})=>{
+  return(
+    <Route 
+    {...rest}
+    render = {props=>
+      Auth.getAuth() ?
+    <Component {...props} />
+    :
+    <Redirect to={
+      {
+        pathname : '/'
+      }
+    } />
+    }
+    />
+  )
+}
 
 class App extends Component {
   render() {
@@ -14,7 +32,8 @@ class App extends Component {
          <Switch>
            <Route path="/" exact  component={Home}/>
            <Route path="/about" exact component={About} />
-           <Route path="/shop" exact  component={Shop} />
+           <PrivateRoute path="/shop" exact component={Shop} />
+           {/* <Route path="/shop" exact  component={Shop} /> */}
          </Switch>
        </Router>
       {/* <About /> */}
