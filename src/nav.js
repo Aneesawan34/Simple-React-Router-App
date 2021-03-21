@@ -1,21 +1,42 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import './nav.css';
+import {Button, Nav, Navbar} from 'react-bootstrap';
+// import './nav.css';
 
 
-class Nav extends Component{
+class NavB extends Component{
     render(){
         return(
-            <nav>
-                <Link to="/"><h3>Logo</h3></Link>
-                <ul className="nav-link">
-                    <Link to="/"><li>Home</li></Link>
-                    <Link to="/about"><li>About</li></Link>
-                    <Link to="/shop"><li>Shop</li></Link>
-                </ul>
-            </nav>
+            <Navbar variant="light" className="shadow p-3 mb-3 bg-white rounded" expand="lg" activeKey="/">
+                {/* <Navbar.Brand href="#home" className="text-success">LOGO</Navbar.Brand> */}
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav" >
+                <Nav>
+                <Nav.Link >
+              <Link to="/">
+                  Home
+                  </Link>
+                  </Nav.Link>
+                <Nav.Link eventKey="link-1">
+                    <Link to="/about">
+                        About
+                    </Link>
+                </Nav.Link>
+                <Nav.Link eventKey="link-2">
+                  <Link to="/shop">
+                    Shop
+                </Link>
+                  </Nav.Link>
+              <Nav.Link eventKey="disabled">
+                  <Link to="/contact">
+                      Contact
+                  </Link>
+              </Nav.Link>
+                </Nav>
+                </Navbar.Collapse>
+          </Navbar>
         )
     }
 }
 
-export default Nav;
+export default NavB;

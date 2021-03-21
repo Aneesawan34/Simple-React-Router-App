@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "react": "^16.10.2",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.10.2",
+    "react-hook-form": "^6.15.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },

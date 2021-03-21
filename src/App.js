@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
-import Nav from './nav.js';
+import NavB from './nav.js';
 import About from './about.js';
 import Shop from './shop.js';
+import Contact from './Contact.js';
 import Auth from './Auth.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PrivateRoute = ({component : Component, ...rest})=>{
   return(
@@ -28,11 +30,12 @@ class App extends Component {
     return (
       <div>
        <Router>
-        <Nav />
+        <NavB />
          <Switch>
            <Route path="/" exact  component={Home}/>
            <Route path="/about" exact component={About} />
            <PrivateRoute path="/shop" exact component={Shop} />
+           <Route path="/contact" exact component={Contact} />
            {/* <Route path="/shop" exact  component={Shop} /> */}
          </Switch>
        </Router>
