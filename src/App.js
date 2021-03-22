@@ -6,6 +6,7 @@ import Shop from './shop.js';
 import Contact from './Contact.js';
 import Auth from './Auth.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Contactus from './Contactus.js';
 
 const PrivateRoute = ({component : Component, ...rest})=>{
   return(
@@ -35,7 +36,8 @@ class App extends Component {
            <Route path="/" exact  component={Home}/>
            <Route path="/about" exact component={About} />
            <PrivateRoute path="/shop" exact component={Shop} />
-           <Route path="/contact" exact component={Contact} />
+           {/* <Route path="/contact" exact component={Contact} /> */}
+           <Route path="/contact" exact component={Contactus} />
            {/* <Route path="/shop" exact  component={Shop} /> */}
          </Switch>
        </Router>
