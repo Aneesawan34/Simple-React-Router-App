@@ -6,12 +6,12 @@
     "bootstrap": "^4.6.0",
     "formik": "^2.2.6",
     "react": "^16.10.2",
-    "react-add-to-calendar": "^0.1.5",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^16.10.2",
     "react-hook-form": "^6.15.5",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-share": "^4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
